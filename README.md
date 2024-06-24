@@ -7,8 +7,6 @@
 
 ![image](https://github.com/darya-kovyaz/ozon-task/assets/73113247/500de610-987d-45cf-94dd-783170308cc5)
 
-![image](https://github.com/darya-kovyaz/ozon-task/assets/73113247/9357bca8-ad36-4570-b3cc-0541367fa1f0)
-
 ## Задача
 
 Разработать прототип блока Progress для использования в мобильных web-приложениях.

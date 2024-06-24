@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/reset.css" />
+        <title>Progress</title>
+    </head>
+    <body>
+        <div class="main-container">
+            <div class="container-component">
+                <div id="progress-container">
+                    <svg id="progress-fill" width="250" height="250" viewBox="0 0 250 250" class="progress-fill">
+                        <circle class="circle-bg" cx="125" cy="125" r="80"></circle>
+                        <circle id="circle-prog" class="circle-prog" cx="125" cy="125" r="80"></circle>
+                    </svg>
+                </div>
+                <div class="control-container">
+                    <div class="control-input">
+                        <input type="number" class="input-number" id="value" min="0" max="100" value="" />
+                        <label for="value" class="control-text">Value</label>
+                    </div>
+                    <div class="control-input">
+                        <label class="switch">
+                            <input type="checkbox" id="animate" />
+                            <span class="slider"></span>
+                        </label>
+                        <label for="animate" class="control-text">Animate</label>
+                    </div>
+                    <div class="control-input">
+                        <label class="switch">
+                            <input type="checkbox" id="hide" />
+                            <span class="slider"></span>
+                        </label>
+                        <label for="hide" class="control-text">Hide</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script src="js/progressCircle.js"></script>
+        <script>
+            document.addEventListener("DOMContentLoaded", () => {
+                const progressCircle = new ProgressCircle("progress-container", "circle-prog", "progress-fill");
+
+                const valueInput = document.getElementById("value");
+                const animateCheckbox = document.getElementById("animate");
+                const hideCheckbox = document.getElementById("hide");
+
+                valueInput.addEventListener("input", (e) => {
+                    let value = e.target.value;
+                    if (value < 0) value = 0;
+                    if (value > 100) value = 100;
+                    progressCircle.updateProgress(value);
+                });
+
+                animateCheckbox.addEventListener("change", (e) => {
+                    progressCircle.animateProgress(e.target.checked);
+                });
+
+                hideCheckbox.addEventListener("change", (e) => {
+                    progressCircle.hideProgress(e.target.checked);
+                });
+            });
+        </script>
+    </body>
+</html>

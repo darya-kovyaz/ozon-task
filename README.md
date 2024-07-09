@@ -5,7 +5,7 @@
 
 Результат [здесь](https://darya-kovyaz.github.io/ozon-task/).
 
-![image](https://github.com/darya-kovyaz/ozon-task/assets/73113247/c1aca3d7-db5b-4f09-9b3f-c69041a1e36e)
+![image](https://github.com/darya-kovyaz/ozon-task/assets/73113247/41db557d-a909-4b1d-9535-2afb4344d27e)
 
 
 ## Задача

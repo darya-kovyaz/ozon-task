@@ -63,6 +63,8 @@ body {
     stroke: #005bff;
     stroke-width: 10;
     stroke-dasharray: 0 690;
+    transition: all;
+    transition-duration: 500ms;
 }
 
 .control-container {

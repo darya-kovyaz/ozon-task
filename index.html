@@ -48,9 +48,15 @@
                 const hideCheckbox = document.getElementById("hide");
 
                 valueInput.addEventListener("input", (e) => {
-                    let value = e.target.value;
-                    if (value < 0) value = 0;
-                    if (value > 100) value = 100;
+                    let value = parseInt(e.target.value, 10);
+                    if (isNaN(value)) {
+                        value = 0;
+                    } else if (value <= 0) {
+                        value = 0;
+                    } else if (value > 100) {
+                        value = Math.floor(value / 10);
+                    }
+                    e.target.value = value;
                     progressCircle.updateProgress(value);
                 });
 

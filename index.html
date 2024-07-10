@@ -38,10 +38,15 @@
                 </div>
             </div>
         </div>
-        <script src="js/progressCircle.js"></script>
-        <script>
+        <script type="module">
+            import ProgressCircle from "./js/progressCircle.js";
+
             document.addEventListener("DOMContentLoaded", () => {
-                const progressCircle = new ProgressCircle("progress-container", "circle-prog", "progress-fill");
+                const progressCircle = new ProgressCircle(
+                    document.getElementById("progress-container"),
+                    document.getElementById("circle-prog"),
+                    document.getElementById("progress-fill")
+                );
 
                 const valueInput = document.getElementById("value");
                 const animateCheckbox = document.getElementById("animate");
